@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Money Form</title>
+  <!-- daisy UI & Tailwind  -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+
+
+  <main class="flex justify-center ">
+
+    <section class="">
+      <!-- Main Balance  -->
+      <h1 class="text-2xl m-3 text-center">Current Balance <span id="main-balance"
+          class="font-bold text-red-500">9500</span></h1>
+
+      <!-- Buttons -->
+      <div class="m-3 flex gap-2 justify-center">
+        <button id="add-money-main-btn" class="btn btn-primary">Add Money</button>
+        <button id="cash-out-main-btn" class="btn btn-outline btn-primary">Cash Out</button>
+      </div>
+
+      <!-- Add Monay form starts -->
+      <div id="add-money-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <form class="card-body">
+
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Amount</span>
+            </label>
+            <input id="amount-input" type="text" placeholder="Enter Your Amount" class="input input-bordered"
+              required />
+          </div>
+
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Your Pin</span>
+            </label>
+            <input id="pin-input" type="password" placeholder="Enter 4 Digit Pin" class="input input-bordered"
+              required />
+          </div>
+
+          <div class="form-control mt-6">
+            <button id="add-money-btn" class="btn btn-primary">Add Money</button>
+          </div>
+
+        </form>
+      </div>
+      <!-- Add Monay form Ends -->
+
+      <!-- Cash Out form starts -->
+      <div id="cash-out-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <form class="card-body">
+
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Amount</span>
+            </label>
+            <input id="cash-out-amount-input" type="text" placeholder="Enter Your Amount" class="input input-bordered"
+              required />
+          </div>
+
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Your Pin</span>
+            </label>
+            <input id="cash-out-pin-input" type="password" placeholder="Enter 4 Digit Pin" class="input input-bordered"
+              required />
+          </div>
+
+          <div class="form-control mt-6">
+            <button id="cash-out-btn" class="btn btn-primary">Cash Out</button>
+          </div>
+
+        </form>
+      </div>
+      <!-- Cash Out form ends -->
+
+    </section>
+  </main>
+
+
+  <script src="addMoneyForm.js"></script>
+  <script src="cashOutForm.js"></script>
+</body>
+
+</html>
